@@ -1,0 +1,161 @@
+[*] ftp found on tcp/21.
+
+[*] ssh found on tcp/22.
+
+[*] http found on tcp/80.
+
+[*] imap found on tcp/143.
+
+[*] ssl/http found on tcp/443.
+
+[*] ssl/imaps found on tcp/993.
+
+
+# nmap -sV --script=http-enum 10.0.2.7           
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-07-30 10:11 EDT
+Nmap scan report for target (10.0.2.7)
+Host is up (0.00041s latency).
+Not shown: 994 closed ports
+PORT    STATE SERVICE    VERSION
+21/tcp  open  ftp        vsftpd 2.0.8 or later
+22/tcp  open  ssh        OpenSSH 5.9p1 Debian 5ubuntu1.7 (Ubuntu Linux; protocol 2.0)
+80/tcp  open  http       Apache httpd 2.2.22 ((Ubuntu))
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+143/tcp open  imap       Dovecot imapd
+443/tcp open  ssl/http   Apache httpd 2.2.22
+| http-enum: 
+|   /forum/: Forum
+|   /phpmyadmin/: phpMyAdmin
+|   /webmail/src/login.php: squirrelmail version 1.4.22
+|_  /webmail/images/sm_logo.png: SquirrelMail
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+993/tcp open  ssl/imaps?
+
+
+# dirb http://10.0.2.7:80 
+---- Scanning URL: http://10.0.2.7:80/ ----
++ http://10.0.2.7:80/cgi-bin/ (CODE:403|SIZE:284)                                                                  
+==> DIRECTORY: http://10.0.2.7:80/fonts/                                                                           
++ http://10.0.2.7:80/forum (CODE:403|SIZE:281)                                                                     
++ http://10.0.2.7:80/index.html (CODE:200|SIZE:1025)                                                               
++ http://10.0.2.7:80/server-status (CODE:403|SIZE:289) 
+
+
+# dirb https://10.0.2.7:443
+---- Scanning URL: https://10.0.2.7:443/ ----
++ https://10.0.2.7:443/cgi-bin/ (CODE:403|SIZE:285)                                                                
+==> DIRECTORY: https://10.0.2.7:443/forum/                                                                         
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/                                                                    
++ https://10.0.2.7:443/server-status (CODE:403|SIZE:290)                                                           
+==> DIRECTORY: https://10.0.2.7:443/webmail/                                                                       
+                                                                                                                  
+                                                                                                                  
+                                                                                                                 
+---- Entering directory: https://10.0.2.7:443/forum/ ----
++ https://10.0.2.7:443/forum/backup (CODE:403|SIZE:289)                                                            
++ https://10.0.2.7:443/forum/config (CODE:403|SIZE:289)                                                            
+==> DIRECTORY: https://10.0.2.7:443/forum/images/                                                                  
+==> DIRECTORY: https://10.0.2.7:443/forum/includes/                                                                
++ https://10.0.2.7:443/forum/index (CODE:200|SIZE:4935)                                                            
++ https://10.0.2.7:443/forum/index.php (CODE:200|SIZE:4935)                                                        
+==> DIRECTORY: https://10.0.2.7:443/forum/js/                                                                      
+==> DIRECTORY: https://10.0.2.7:443/forum/lang/                                                                    
+==> DIRECTORY: https://10.0.2.7:443/forum/modules/                                                                 
+==> DIRECTORY: https://10.0.2.7:443/forum/templates_c/                                                             
+==> DIRECTORY: https://10.0.2.7:443/forum/themes/                                                                  
+==> DIRECTORY: https://10.0.2.7:443/forum/update/                                                                  
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/ ----
++ https://10.0.2.7:443/phpmyadmin/favicon.ico (CODE:200|SIZE:18902)                                                
++ https://10.0.2.7:443/phpmyadmin/index.php (CODE:200|SIZE:7540)                                                   
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/js/                                                                 
++ https://10.0.2.7:443/phpmyadmin/libraries (CODE:403|SIZE:297)                                                    
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/locale/                                                             
++ https://10.0.2.7:443/phpmyadmin/phpinfo.php (CODE:200|SIZE:7540)                                                 
++ https://10.0.2.7:443/phpmyadmin/setup (CODE:401|SIZE:476)                                                        
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/                                                             
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/ ----
++ https://10.0.2.7:443/webmail/class (CODE:403|SIZE:290)                                                           
+==> DIRECTORY: https://10.0.2.7:443/webmail/config/                                                                
++ https://10.0.2.7:443/webmail/functions (CODE:403|SIZE:294)                                                       
++ https://10.0.2.7:443/webmail/help (CODE:403|SIZE:289)                                                            
+==> DIRECTORY: https://10.0.2.7:443/webmail/images/                                                                
++ https://10.0.2.7:443/webmail/include (CODE:403|SIZE:292)                                                         
++ https://10.0.2.7:443/webmail/index.php (CODE:302|SIZE:0)                                                         
++ https://10.0.2.7:443/webmail/locale (CODE:403|SIZE:291)                                                          
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/                                                               
+==> DIRECTORY: https://10.0.2.7:443/webmail/src/                                                                   
+==> DIRECTORY: https://10.0.2.7:443/webmail/themes/                                                                
+                                                                                                         
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/locale/                                                     
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/ ----
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/original/                                                    
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/config/ ----
++ https://10.0.2.7:443/webmail/config/index.php (CODE:302|SIZE:0)                                                  
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/images/ ----
++ https://10.0.2.7:443/webmail/images/index.php (CODE:302|SIZE:0)                                                  
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/ ----
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/administrator/                                                 
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/calendar/                                                      
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/demo/                                                          
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/fortune/                                                       
++ https://10.0.2.7:443/webmail/plugins/index.php (CODE:302|SIZE:0)                                                 
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/info/                                                          
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/test/                                                          
+==> DIRECTORY: https://10.0.2.7:443/webmail/plugins/translate/                                                     
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/src/ ----
++ https://10.0.2.7:443/webmail/src/index.php (CODE:302|SIZE:0)                                                     
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/themes/ ----
+==> DIRECTORY: https://10.0.2.7:443/webmail/themes/css/                                                            
++ https://10.0.2.7:443/webmail/themes/index.php (CODE:302|SIZE:0)                                                  
+
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/original/ ----
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/original/css/                                                
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/original/img/                                                
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/original/jquery/                                             
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/administrator/ ----
++ https://10.0.2.7:443/webmail/plugins/administrator/index.php (CODE:302|SIZE:0)                                   
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/calendar/ ----
++ https://10.0.2.7:443/webmail/plugins/calendar/index.php (CODE:302|SIZE:0)                                        
++ https://10.0.2.7:443/webmail/plugins/calendar/README (CODE:200|SIZE:887)                                         
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/demo/ ----
++ https://10.0.2.7:443/webmail/plugins/demo/index.php (CODE:302|SIZE:0)                                            
++ https://10.0.2.7:443/webmail/plugins/demo/README (CODE:200|SIZE:837)                                             
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/fortune/ ----
++ https://10.0.2.7:443/webmail/plugins/fortune/index.php (CODE:302|SIZE:0)                                         
++ https://10.0.2.7:443/webmail/plugins/fortune/README (CODE:200|SIZE:485)                                          
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/info/ ----
++ https://10.0.2.7:443/webmail/plugins/info/index.php (CODE:302|SIZE:0)                                            
++ https://10.0.2.7:443/webmail/plugins/info/README (CODE:200|SIZE:1632)                                            
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/test/ ----
++ https://10.0.2.7:443/webmail/plugins/test/index.php (CODE:302|SIZE:0)                                            
++ https://10.0.2.7:443/webmail/plugins/test/README (CODE:200|SIZE:505)                                             
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/plugins/translate/ ----
++ https://10.0.2.7:443/webmail/plugins/translate/index.php (CODE:302|SIZE:0)                                       
++ https://10.0.2.7:443/webmail/plugins/translate/README (CODE:200|SIZE:1730)                                       
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/webmail/themes/css/ ----
++ https://10.0.2.7:443/webmail/themes/css/index.php (CODE:302|SIZE:0)                                              
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/original/css/ ----
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/original/img/ ----
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/original/jquery/ ----
+==> DIRECTORY: https://10.0.2.7:443/phpmyadmin/themes/original/jquery/images/                                      
+                                                                                                                   
+---- Entering directory: https://10.0.2.7:443/phpmyadmin/themes/original/jquery/images/ ----

@@ -1,0 +1,46 @@
+# Nmap 7.91 scan initiated Fri Jul 30 08:52:46 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/results/10.0.2.7/scans/_top_20_udp_nmap.txt -oX /home/kali/results/10.0.2.7/scans/xml/_top_20_udp_nmap.xml 10.0.2.7
+Nmap scan report for target (10.0.2.7)
+Host is up, received arp-response (0.00032s latency).
+Scanned at 2021-07-30 08:52:46 EDT for 290s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open|filtered domain       no-response
+67/udp    closed        dhcps        port-unreach ttl 64
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   closed        ntp          port-unreach ttl 64
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   closed        netbios-dgm  port-unreach ttl 64
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   closed        snmptrap     port-unreach ttl 64
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   closed        syslog       port-unreach ttl 64
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  closed        upnp         port-unreach ttl 64
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+MAC Address: 08:00:27:FE:E5:E9 (Oracle VirtualBox virtual NIC)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=7/30%OT=%CT=%CU=67%PV=Y%DS=1%DC=D%G=N%M=080027%TM=6103F740%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.32 ms target (10.0.2.7)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jul 30 08:57:36 2021 -- 1 IP address (1 host up) scanned in 290.28 seconds

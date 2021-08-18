@@ -1,0 +1,89 @@
+Version: 2.0.10-static
+OpenSSL 1.1.1l-dev  xx XXX xxxx
+
+Connected to 10.0.2.7
+
+Testing SSL server 10.0.2.7 on port 443 using SNI name 10.0.2.7
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     enabled
+TLSv1.0   disabled
+TLSv1.1   disabled
+TLSv1.2   disabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+
+  Supported Server Cipher(s):
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIICpDCCAYwCCQDVG5xgrjCJoDANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwlC
+b3JuVG9TZWMwHhcNMTUxMDA4MDAxOTQ2WhcNMjUxMDA1MDAxOTQ2WjAUMRIwEAYD
+VQQDEwlCb3JuVG9TZWMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC8
+1ChnI0Z4calM5DQc/Jw6py+3avYfKFCeRqHbOz/NxkBBRFXKDSwBX7z9+yDjjISb
+FZsb7Oc4q0M3MirRvivV7RXsv9oy5+TwVOG3pryK/SQVyaTR5auY/omHN4sV283i
+eBwGDVujf2vdzj0BzfZr7Pwpp+iCx6vGXVhwuEVwP3Ao8SVckMc0xXERyYQSgA9r
+l7OJ3hKswfzqhp6VuJMIOe38QD2Hmj4S/SAnC8X5MWwspI5ZSyU7YF3aKpuEzpBC
+kU7nQr6eFU9nq6c7/u3vrs5GAjOVjJ4v32j+yC9kwAPy0s756SHDobaguVYx9Ias
+ddKjVoFa+wy0zMeEEGztAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAJrrrBK9y1dz
+SG5vLml0PrZR66L+lHCYpz/hSmmV2DyeYtRcZ5yl0qxBCtT5L0L/e2PGdXegQz/A
+L99S3zhfSkB+tF9iTEx6RfInG7SvYlaDrMdilCRsto8VDad4NXNq8+hJRqkpTRoO
+hEPe/J+lVgUcekcUFgQ1c+gpRtMdzci11hRdTapLL8Ve/8SCVuTVK3LL/sZ0Oz8l
+l+Gvvh/7EZ7DylyPNH1vq7MZvy+cpEadrimGX10dKXiYfhUFbnq3bd0ZXGHKT1iA
+JGtUfQ7nNuJ8R5MaPr+73mhbV4wwcmaDz1e66XUi9EcvSWvAe+zSy93YwsV1eX91
+FU56FFipSCQ=
+-----END CERTIFICATE-----
+    Version: 0
+    Serial Number: d5:1b:9c:60:ae:30:89:a0
+    Signature Algorithm: sha1WithRSAEncryption
+    Issuer: /CN=BornToSec
+    Not valid before: Oct  8 00:19:46 2015 GMT
+    Not valid after: Oct  5 00:19:46 2025 GMT
+    Subject: /CN=BornToSec
+    Public Key Algorithm: NULL
+    RSA Public Key: (2048 bit)
+      RSA Public-Key: (2048 bit)
+      Modulus:
+          00:bc:d4:28:67:23:46:78:71:a9:4c:e4:34:1c:fc:
+          9c:3a:a7:2f:b7:6a:f6:1f:28:50:9e:46:a1:db:3b:
+          3f:cd:c6:40:41:44:55:ca:0d:2c:01:5f:bc:fd:fb:
+          20:e3:8c:84:9b:15:9b:1b:ec:e7:38:ab:43:37:32:
+          2a:d1:be:2b:d5:ed:15:ec:bf:da:32:e7:e4:f0:54:
+          e1:b7:a6:bc:8a:fd:24:15:c9:a4:d1:e5:ab:98:fe:
+          89:87:37:8b:15:db:cd:e2:78:1c:06:0d:5b:a3:7f:
+          6b:dd:ce:3d:01:cd:f6:6b:ec:fc:29:a7:e8:82:c7:
+          ab:c6:5d:58:70:b8:45:70:3f:70:28:f1:25:5c:90:
+          c7:34:c5:71:11:c9:84:12:80:0f:6b:97:b3:89:de:
+          12:ac:c1:fc:ea:86:9e:95:b8:93:08:39:ed:fc:40:
+          3d:87:9a:3e:12:fd:20:27:0b:c5:f9:31:6c:2c:a4:
+          8e:59:4b:25:3b:60:5d:da:2a:9b:84:ce:90:42:91:
+          4e:e7:42:be:9e:15:4f:67:ab:a7:3b:fe:ed:ef:ae:
+          ce:46:02:33:95:8c:9e:2f:df:68:fe:c8:2f:64:c0:
+          03:f2:d2:ce:f9:e9:21:c3:a1:b6:a0:b9:56:31:f4:
+          86:ac:75:d2:a3:56:81:5a:fb:0c:b4:cc:c7:84:10:
+          6c:ed
+      Exponent: 65537 (0x10001)
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha1WithRSAEncryption
+RSA Key Strength:    2048
+
+Subject:  BornToSec
+Issuer:   BornToSec
+
+Not valid before: Oct  8 00:19:46 2015 GMT
+Not valid after:  Oct  5 00:19:46 2025 GMT

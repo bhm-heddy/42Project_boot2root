@@ -1,0 +1,155 @@
+Version: 2.0.10-static
+OpenSSL 1.1.1l-dev  xx XXX xxxx
+
+Connected to 10.0.2.7
+
+Testing SSL server 10.0.2.7 on port 993 using SNI name 10.0.2.7
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     enabled
+TLSv1.0   enabled
+TLSv1.1   enabled
+TLSv1.2   enabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLSv1.2 not vulnerable to heartbleed
+TLSv1.1 not vulnerable to heartbleed
+TLSv1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  DHE-RSA-AES256-GCM-SHA384     DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-GCM-SHA256     DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.2  112 bits  DHE-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.2  256 bits  AES256-GCM-SHA384            
+Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+Accepted  TLSv1.2  256 bits  AES256-SHA256                
+Accepted  TLSv1.2  128 bits  AES128-SHA256                
+Accepted  TLSv1.2  256 bits  AES256-SHA                   
+Accepted  TLSv1.2  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.2  128 bits  AES128-SHA                   
+Accepted  TLSv1.2  128 bits  SEED-SHA                     
+Accepted  TLSv1.2  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.2  128 bits  RC4-SHA                      
+Accepted  TLSv1.2  128 bits  RC4-MD5                      
+Accepted  TLSv1.2  112 bits  DES-CBC3-SHA                 
+Preferred TLSv1.1  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.1  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.1  112 bits  DHE-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.1  256 bits  AES256-SHA                   
+Accepted  TLSv1.1  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.1  128 bits  AES128-SHA                   
+Accepted  TLSv1.1  128 bits  SEED-SHA                     
+Accepted  TLSv1.1  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.1  128 bits  RC4-SHA                      
+Accepted  TLSv1.1  128 bits  RC4-MD5                      
+Accepted  TLSv1.1  112 bits  DES-CBC3-SHA                 
+Preferred TLSv1.0  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.0  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.0  112 bits  DHE-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.0  256 bits  AES256-SHA                   
+Accepted  TLSv1.0  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.0  128 bits  AES128-SHA                   
+Accepted  TLSv1.0  128 bits  SEED-SHA                     
+Accepted  TLSv1.0  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.0  128 bits  RC4-SHA                      
+Accepted  TLSv1.0  128 bits  RC4-MD5                      
+Accepted  TLSv1.0  112 bits  DES-CBC3-SHA                 
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIDrzCCApegAwIBAgIJAN968TzwGVlvMA0GCSqGSIb3DQEBBQUAMG4xHDAaBgNV
+BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG
+A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv
+c2VjLm5ldDAeFw0xNTEwMDgyMDU3MzBaFw0yNTEwMDcyMDU3MzBaMG4xHDAaBgNV
+BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxEjAQBgNVBAsMCWxvY2FsaG9zdDESMBAG
+A1UEAwwJbG9jYWxob3N0MSYwJAYJKoZIhvcNAQkBFhdyb290QG1haWwuYm9ybnRv
+c2VjLm5ldDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMpjPQ2I6YkN
+jZpxkEjfw7XxZhr+oKwqvb4Uc6CEHzrY4z/zG/HsZ/cgNLgYkLevEf0+DIPliYSG
+o7yht28wbyW1GZGBvh5wYBRfJm8BDc5iyyuayQGxAOKXmgycv58jVvr4kuF0P0xW
+5vBHxzfDF1AXB2qNKg1h5oc6My1ox6E8THSxUrCwzG2b4I8qdpiAkI/G+My8U5kQ
+fSkL5OnKZ5Z1+pY3L9PzpNM6RJmx53ffi9jBlHnQ+TVTOzx72nqyKgR/at5P/O4W
+SxxMztVY6d8ejaA0MQEcIjEQdTXFyCnfj1mHXRHpHaCQ6iVvkbJwJmKEWVXjcERo
+IVMik7zn4hMCAwEAAaNQME4wHQYDVR0OBBYEFA4UxwArd2vFwnkguZAOlIz01Qqs
+MB8GA1UdIwQYMBaAFA4UxwArd2vFwnkguZAOlIz01QqsMAwGA1UdEwQFMAMBAf8w
+DQYJKoZIhvcNAQEFBQADggEBAKuoOkJBTDFjE6a066CPXQ6ulE6siN1B+nw95NnO
+N/RZrjEkEr24HAFJxn1zXgjEhlYToJgTNTCGLpOKr0weFEJcTiZLNuh7v++WLIM5
+YBpwscnbxL+2ak9PLbGGVyq+RrX3RTzD5t6WZChwxCPqcNORB9pQknO9a7qG9kpl
+0ljGwg/xYvY+tETYBSz88Wy053Dq+4on5tzkeLOxVi1WSA3XxdbQrS5kmfGCCIVi
+Phl8QItIxBdZGoOY2niOszqDU4gaqKsx7wcIsDcKoXl2lNutwV8Eb/HLBo8KBXjr
+u3axYWy9JvJQkowL0Z5oHss3a2J3ErljjQLUlUFR6sd+tz0=
+-----END CERTIFICATE-----
+    Version: 2
+    Serial Number: df:7a:f1:3c:f0:19:59:6f
+    Signature Algorithm: sha1WithRSAEncryption
+    Issuer: /O=Dovecot mail server/OU=localhost/CN=localhost/emailAddress=root@mail.borntosec.net
+    Not valid before: Oct  8 20:57:30 2015 GMT
+    Not valid after: Oct  7 20:57:30 2025 GMT
+    Subject: /O=Dovecot mail server/OU=localhost/CN=localhost/emailAddress=root@mail.borntosec.net
+    Public Key Algorithm: NULL
+    RSA Public Key: (2048 bit)
+      RSA Public-Key: (2048 bit)
+      Modulus:
+          00:ca:63:3d:0d:88:e9:89:0d:8d:9a:71:90:48:df:
+          c3:b5:f1:66:1a:fe:a0:ac:2a:bd:be:14:73:a0:84:
+          1f:3a:d8:e3:3f:f3:1b:f1:ec:67:f7:20:34:b8:18:
+          90:b7:af:11:fd:3e:0c:83:e5:89:84:86:a3:bc:a1:
+          b7:6f:30:6f:25:b5:19:91:81:be:1e:70:60:14:5f:
+          26:6f:01:0d:ce:62:cb:2b:9a:c9:01:b1:00:e2:97:
+          9a:0c:9c:bf:9f:23:56:fa:f8:92:e1:74:3f:4c:56:
+          e6:f0:47:c7:37:c3:17:50:17:07:6a:8d:2a:0d:61:
+          e6:87:3a:33:2d:68:c7:a1:3c:4c:74:b1:52:b0:b0:
+          cc:6d:9b:e0:8f:2a:76:98:80:90:8f:c6:f8:cc:bc:
+          53:99:10:7d:29:0b:e4:e9:ca:67:96:75:fa:96:37:
+          2f:d3:f3:a4:d3:3a:44:99:b1:e7:77:df:8b:d8:c1:
+          94:79:d0:f9:35:53:3b:3c:7b:da:7a:b2:2a:04:7f:
+          6a:de:4f:fc:ee:16:4b:1c:4c:ce:d5:58:e9:df:1e:
+          8d:a0:34:31:01:1c:22:31:10:75:35:c5:c8:29:df:
+          8f:59:87:5d:11:e9:1d:a0:90:ea:25:6f:91:b2:70:
+          26:62:84:59:55:e3:70:44:68:21:53:22:93:bc:e7:
+          e2:13
+      Exponent: 65537 (0x10001)
+    X509v3 Extensions:
+      X509v3 Subject Key Identifier: 
+        0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC
+      X509v3 Authority Key Identifier: 
+        keyid:0E:14:C7:00:2B:77:6B:C5:C2:79:20:B9:90:0E:94:8C:F4:D5:0A:AC
+
+      X509v3 Basic Constraints: 
+        CA:TRUE
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha1WithRSAEncryption
+RSA Key Strength:    2048
+
+Subject:  localhost
+Issuer:   localhost
+
+Not valid before: Oct  8 20:57:30 2015 GMT
+Not valid after:  Oct  7 20:57:30 2025 GMT

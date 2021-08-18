@@ -1,0 +1,50 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/results/10.0.2.7/scans/_top_20_udp_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/_top_20_udp_nmap.xml" 10.0.2.7
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/results/10.0.2.7/scans/_quick_tcp_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/_quick_tcp_nmap.xml" 10.0.2.7
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/results/10.0.2.7/scans/_full_tcp_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/_full_tcp_nmap.xml" 10.0.2.7
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:21 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_21_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 21 --script="banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/results/10.0.2.7/scans/tcp_21_ftp_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_21_ftp_nmap.xml" 10.0.2.7
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:22 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/results/10.0.2.7/scans/tcp_22_ssh_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_22_ssh_nmap.xml" 10.0.2.7
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:80 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/results/10.0.2.7/scans/tcp_80_http_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_80_http_nmap.xml" 10.0.2.7
+
+curl -sSik http://10.0.2.7:80/ -m 10 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.0.2.7:80/robots.txt -m 10 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.0.2.7:80/ /home/kali/results/10.0.2.7/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.0.2.7:80 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_80_http_whatweb.txt"
+
+feroxbuster -u http://10.0.2.7:80 -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /home/kali/results/10.0.2.7/scans/tcp_80_http_feroxbuster.txt
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:143 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_143_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 143 --script="banner,(imap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/results/10.0.2.7/scans/tcp_143_imap_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_143_imap_nmap.xml" 10.0.2.7
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:443 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_443_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 443 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/results/10.0.2.7/scans/tcp_443_http_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_443_https_nmap.xml" 10.0.2.7
+
+curl -sSik https://10.0.2.7:443/ -m 10 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_443_https_index.html"
+
+curl -sSik https://10.0.2.7:443/robots.txt -m 10 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_443_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://10.0.2.7:443/ /home/kali/results/10.0.2.7/scans/tcp_443_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://10.0.2.7:443 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_443_https_whatweb.txt"
+
+feroxbuster -u https://10.0.2.7:443 -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /home/kali/results/10.0.2.7/scans/tcp_443_https_feroxbuster.txt
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 10.0.2.7:993 2>&1 | tee "/home/kali/results/10.0.2.7/scans/tcp_993_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 993 --script="banner,(imap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/results/10.0.2.7/scans/tcp_993_imap_nmap.txt" -oX "/home/kali/results/10.0.2.7/scans/xml/tcp_993_imap_nmap.xml" 10.0.2.7
+

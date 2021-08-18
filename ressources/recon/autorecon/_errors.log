@@ -1,0 +1,3 @@
+[*] Task tcp/80/feroxbuster returned non-zero exit code: 127. Command: feroxbuster -u http://10.0.2.7:80 -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /home/kali/results/10.0.2.7/scans/tcp_80_http_feroxbuster.txt
+[*] Task tcp/443/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://10.0.2.7:443/ /home/kali/results/10.0.2.7/scans/tcp_443_https_screenshot.png; fi
+[*] Task tcp/443/feroxbuster returned non-zero exit code: 127. Command: feroxbuster -u https://10.0.2.7:443 -t 10 -w /usr/share/seclists/Discovery/Web-Content/common.txt -x "txt,html,php,asp,aspx,jsp" -v -k -n -o /home/kali/results/10.0.2.7/scans/tcp_443_https_feroxbuster.txt
