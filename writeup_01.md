@@ -117,7 +117,7 @@ This ouput doesn't work to connect to the next level. We try differnt hash and g
 
 We can now connect on the server with ssh
 
-`ssh target@laurie`
+`ssh laurie@target`
 
 In the home : 
 ```
@@ -146,7 +146,7 @@ All input give password for next level `thor - Publicspeakingisveryeasy.12624120
 
 ## STEP 7
 
-`ssh target@thor`
+`ssh thor@target`
 In the home : 
 ```
 cat README 
@@ -160,7 +160,7 @@ We try all hash and work with MD5 : `646da671ca01bb5d84dbb5fb2238dc8e`
 
 ## STEP 8
 
-`ssh target@zaz`
+`ssh zaz@target`
 In the home : one binary `exploit_me`. It take 1 argument and print it.
 With `nm`, `strace` and `ltrace` , we understand that argument is copy in buffer with 140 len.
 
