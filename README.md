@@ -10,13 +10,13 @@
 
 **Solution**s : 
 
-[Wirteup 01](https://github.com/bhm-heddy/tmpb2r/blob/master/writeup_01.md) : treasure hunt through users 
+[Wirteup 01](/writeup_01.md) : treasure hunt through users 
 
-[Writeup 02](https://github.com/bhm-heddy/tmpb2r/blob/master/writeup_02.md) : Dirty Cow exploit
+[Writeup 02](/writeup_02.md) : Dirty Cow exploit
 
-[Bonus 01](https://github.com/bhm-heddy/tmpb2r/blob/master/bonus_01.md) : RET2LIBC
+[Bonus 01](/bonus/bonus_01.md) : RET2LIBC
 
-[Bonus 02](https://github.com/bhm-heddy/tmpb2r/blob/master/bonus_02.md) : Bootloader exploit 
+[Bonus 02](/bonus/bonus_02.md) : Bootloader exploit 
 
 
 
